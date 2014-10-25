@@ -72,7 +72,7 @@ public:
         return *this;
     }
 
-    bool asBool()
+    bool asBool() const
     {
         CCASSERT(BOOL == mType, "[var::asBool] got invalid type.");
         return mValue.booleanValue;
@@ -94,7 +94,7 @@ public:
         return *this;
     }
 
-    char asChar()
+    char asChar() const
     {
         CCASSERT(INT8 == mType, "[var::asChar] got invalid type.");
         return mValue.int8Value;
@@ -116,7 +116,7 @@ public:
         return *this;
     }
 
-    unsigned char asUChar()
+    unsigned char asUChar() const
     {
         CCASSERT(INT8 == mType, "[var::asUChar] got invalid type.");
         return (unsigned char)mValue.int8Value;
@@ -138,7 +138,7 @@ public:
         return *this;
     }
 
-    short asShort()
+    short asShort() const
     {
         CCASSERT(INT16 == mType, "[var::asShort] got invalid type.");
         return mValue.int16Value;
@@ -160,7 +160,7 @@ public:
         return *this;
     }
 
-    unsigned short asUShort()
+    unsigned short asUShort() const
     {
         CCASSERT(INT16 == mType, "[var::asUShort] got invalid type.");
         return (unsigned short)mValue.int16Value;
@@ -182,7 +182,7 @@ public:
         return *this;
     }
 
-    int asInt()
+    int asInt() const
     {
         CCASSERT(INT32 == mType, "[var::asInt] got invalid type.");
         return mValue.int32Value;
@@ -204,7 +204,7 @@ public:
         return *this;
     }
 
-    unsigned int asUInt()
+    unsigned int asUInt() const
     {
         CCASSERT(INT32 == mType, "[var::asUInt] got invalid type.");
         return (unsigned int)mValue.int32Value;
@@ -226,7 +226,7 @@ public:
         return *this;
     }
 
-    long long asInt64()
+    long long asInt64() const
     {
         CCASSERT(INT64 == mType, "[var::asInt64] got invalid type.");
         return mValue.int64Value;
@@ -248,7 +248,7 @@ public:
         return *this;
     }
 
-    unsigned long long asUInt64()
+    unsigned long long asUInt64() const
     {
         CCASSERT(INT64 == mType, "[var::asUInt64 got] invalid type.");
         return (unsigned long long)mValue.int64Value;
@@ -270,7 +270,7 @@ public:
         return *this;
     }
 
-    void* asPointer()
+    void* asPointer() const
     {
         CCASSERT(POINTER == mType, "[var::asPointer] got invalid type.");
         return mValue.pointerValue;
@@ -292,7 +292,7 @@ public:
         return *this;
     }
 
-    float asFloat()
+    float asFloat() const
     {
         CCASSERT(FLOAT == mType, "[var::asFloat] got invalid type.");
         return mValue.floatValue;
@@ -314,7 +314,7 @@ public:
         return *this;
     }
 
-    double asDouble()
+    double asDouble() const
     {
         CCASSERT(DOUBLE == mType, "[var::asDouble] got invalid type.");
         return mValue.doubleValue;
@@ -351,7 +351,7 @@ public:
         return *this;
     }
 
-    std::string& asString()
+    std::string& asString() const
     {
         CCASSERT(STRING == mType, "[var::asString] got invalid type.");
         CCASSERT(0 != mValue.stringValue, "[var::asString] got invalid type.");

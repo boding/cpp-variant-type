@@ -180,7 +180,7 @@ public:
         return mVars.size();
     }
 
-    var& at(int index)
+    const var& at(int index) const
     {
         CCASSERT(index >= 0 && index < (int)mVars.size(), "[varlist::at] invalid index.");
         return mVars[index];
